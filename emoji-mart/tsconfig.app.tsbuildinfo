@@ -1,0 +1,1 @@
+{"root":["./src/app.tsx","./src/main.tsx","./src/types.ts","./src/vite-env.d.ts","./src/components/cart.tsx","./src/components/checkoutform.tsx","./src/components/emojicard.tsx","./src/components/searchbar.tsx","./src/components/thankyoupage.tsx","./src/context/cartcontext.tsx","./src/data/emojis.ts"],"version":"6.0.3"}
