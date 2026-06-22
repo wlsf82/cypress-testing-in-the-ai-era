@@ -9,7 +9,7 @@
   },
   "keywords": [],
   "author": "Walmyr <wlsf82@gmail.com> (https://walmyr.dev/)",
-  "license": "ISC",
+  "license": "MIT",
   "type": "commonjs",
   "devDependencies": {
     "cypress": "^15.17.0"
