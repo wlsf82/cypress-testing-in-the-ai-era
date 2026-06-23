@@ -61,7 +61,7 @@ describe('<EmojiCard />', () => {
     cy.get('[data-testid="cart-count"]').should('have.text', 'Fake cart total: 0');
 
     // Act
-    cy.contains('button', 'Add to Cart').dblclick();
+    cy.contains('button', 'Add to Cart').click();
 
     // Assert: the emoji is added and the card onClick did not fire (stopPropagation)
     cy.get('[data-testid="cart-count"]').should('have.text', 'Fake cart total: 1');
