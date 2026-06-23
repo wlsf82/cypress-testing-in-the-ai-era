@@ -5,5 +5,19 @@ cypress/downloads/
 cypress/screenshots/
 cypress/videos/
 
+emoji-mart/cypress/downloads/
+emoji-mart/cypress/screenshots/
+emoji-mart/cypress/videos/
+
+engage-sphere/cypress/downloads/
+engage-sphere/cypress/screenshots/
+engage-sphere/cypress/videos/
+
+tat-csc/cypress/downloads/
+tat-csc/cypress/screenshots/
+tat-csc/cypress/videos/
+
 node_modules/
 emoji-mart/node_modules/
+engage-sphere/node_modules/
+tat-csc/node_modules/
