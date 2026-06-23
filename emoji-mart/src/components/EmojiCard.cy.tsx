@@ -55,17 +55,19 @@ describe('<EmojiCard />', () => {
     cy.get('@onClick').should('have.been.calledOnce');
   });
 
+  // Failing test - Begin
   it('clicking "Add to Cart" → adds the emoji to the cart without triggering onClick', () => {
     // Assert: cart starts empty
-    cy.get('[data-testid="cart-count"]').should('contains.text', '0');
+    cy.get('[data-testid="cart-count"]').should('have.text', 'Fake cart total: 0');
 
     // Act
-    cy.contains('button', 'Add to Cart').click();
+    cy.contains('button', 'Add to Cart').dblclick();
 
     // Assert: the emoji is added and the card onClick did not fire (stopPropagation)
-    cy.get('[data-testid="cart-count"]').should('contain.text', '1');
+    cy.get('[data-testid="cart-count"]').should('have.text', 'Fake cart total: 1');
     cy.get('@onClick').should('not.have.been.called');
   });
+  // Failing test - End
 
   it('clicking "Add to Cart" twice → increases the quantity of the same emoji', () => {
     // Act
