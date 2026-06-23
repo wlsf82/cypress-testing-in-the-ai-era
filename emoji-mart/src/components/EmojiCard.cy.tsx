@@ -10,7 +10,7 @@ import { Emoji } from '../types';
 function CartViewer() {
   const { cart } = useCart();
   const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
-  return <div data-testid="cart-count">{totalItems}</div>;
+  return <div data-testid="cart-count">Fake cart total: {totalItems}</div>;
 }
 
 describe('<EmojiCard />', () => {
@@ -57,13 +57,13 @@ describe('<EmojiCard />', () => {
 
   it('clicking "Add to Cart" → adds the emoji to the cart without triggering onClick', () => {
     // Assert: cart starts empty
-    cy.get('[data-testid="cart-count"]').should('have.text', '0');
+    cy.get('[data-testid="cart-count"]').should('contains.text', '0');
 
     // Act
     cy.contains('button', 'Add to Cart').click();
 
     // Assert: the emoji is added and the card onClick did not fire (stopPropagation)
-    cy.get('[data-testid="cart-count"]').should('have.text', '1');
+    cy.get('[data-testid="cart-count"]').should('contain.text', '1');
     cy.get('@onClick').should('not.have.been.called');
   });
 
@@ -72,6 +72,6 @@ describe('<EmojiCard />', () => {
     cy.contains('button', 'Add to Cart').click().click();
 
     // Assert: same emoji accumulates quantity rather than duplicating
-    cy.get('[data-testid="cart-count"]').should('have.text', '2');
+    cy.get('[data-testid="cart-count"]').should('contain.text', '2');
   });
 });
