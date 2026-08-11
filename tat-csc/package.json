@@ -12,6 +12,6 @@
   "license": "MIT",
   "type": "commonjs",
   "devDependencies": {
-    "cypress": "^15.20.0"
+    "cypress": "^15.20.1"
   }
 }
