@@ -1,7 +1,7 @@
 import { defineConfig } from "cypress";
 
 export default defineConfig({
-  allowCypressEnv: false,
+  defaultBrowser: "chrome",
 
   e2e: {
     baseUrl: "http://localhost:5173",

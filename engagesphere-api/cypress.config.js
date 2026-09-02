@@ -1,7 +1,7 @@
 const { defineConfig } = require("cypress");
 
 module.exports = defineConfig({
-  allowCypressEnv: false,
+  defaultBrowser: "chrome",
   e2e: {
     baseUrl: "http://localhost:3001",
     setupNodeEvents(on, config) {
